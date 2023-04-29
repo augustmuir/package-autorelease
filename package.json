@@ -1,6 +1,6 @@
 {
   "name": "@augustmuir/package-autorelease",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "create a private Github package which automatically handles versioning and releases (via a release script)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
