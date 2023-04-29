@@ -1,33 +1,45 @@
-# package-autorelease
+<h1 align="center">Package-AutoRelease</h1>
+<p align="center">
+  <b>The Ultimate Guide to Effortlessly Automate Versioning and Releases for Your Private (or public) Github Packages</b>
+  <br>
+</p>
 
-This repository is a step-by-step guide to creating a private Github package which automatically handles versioning and releases via a release script. 
+Package-AutoRelease is a tool designed to help you easily automate the versioning and release process of your Github packages (private or public).
 
-## Steps to create a new package
+## 🚀 Features
 
-### 1. Create a git repo with an npm package
-- Use the command `npm init -y` to create a new npm package.
-- The name of the package must be in the format `@YOUR_GITHUB_USERNAME/YOUR_REPO_NAME`, for example: `@augustmuir/my-private-repo`.
+- Easy-to-follow, step-by-step instructions to help you create your own private Github package for your code.
+- Automatic versioning and releases with a single command thanks to `standard-version`.
+- Seamless authentication via Github, with no need for an npm account/server.
+- Commitizen-friendly commits and automatically generated changelogs.
 
-### 2. Create a Github Personal Access token
-- Create a Github Personal Access token [here](https://github.com/settings/tokens).
-- The only permission needed is `write:packages`.
+## 🎉 Getting Started
 
-### 3. Authenticate using Github
-- Run the command `npm login --scope=@OWNER --registry=https://npm.pkg.github.com`, replacing `@OWNER` with your Github username (for example: `@augustmuir`).
-- No npm account/server is needed for authentication.
+Getting started with Package-AutoRelease is a breeze. Follow these simple steps to automate your versioning and releasing:
 
-### 4. Automate releases via a release script
-- Install the `standard-version` package with the command `npm install -D standard-version@latest`.
-- Add the following script to your `package.json` file:
-    ```
-    "scripts": {
-        "release": "standard-version && git push --follow-tags && npm publish"
-    }
-    ```
+1. Create a git repo with an npm package (`npm init -y`).
+    - The name of the package **must** be `@YOUR_GITHUB_USERNAME/YOUR_REPO_NAME`, e.g. `@augustmuir/my-private-repo`.
+2. Create a Github Personal Access token [here](https://github.com/settings/tokens).
+    - Only permission needed is `write:packages`.
+3. Authenticate using Github (no npm account/server is needed).
+    - With `@OWNER` being your Github username (e.g. `@augustmuir`), run `npm login --scope=@OWNER --registry=https://npm.pkg.github.com`.
+4. Automate releases via a release script:
+    - Install `standard-version` with `npm install -D standard-version@latest`.
+    - Add the following script to your `package.json`:
+        ```
+        "scripts": {
+            "release": "standard-version && git push --follow-tags && npm publish"
+        }
+        ```
 
-## Usage
+## 💻 Usage
+
+Using Package-AutoRelease is as simple as:
+
 - Commit and push to your branch as needed.
-- When you want to create a new version, simply run `npm run release` and a new release, along with a changelog, will be generated automatically.
-- To use the package in other projects, run the command `npm install @augustmuir/my-private-repo`, replacing `@augustmuir/my-private-repo` with your own Github username/repo name.
+- When you're ready to create a new release, simply run `npm run release`, and a new release with a changelog will be generated automatically.
+- Use the package in other projects via: `npm install @YOUR_GITHUB_USERNAME/YOUR_REPO_NAME` (replace github username/repo name).
 
-For more information, check out this [article](https://adevait.com/software/publish-private-npm-packages-with-github-package-registry) on publishing private npm packages with Github Package Registry.
+## 📝 License
+
+Package-AutoRelease is released under the [MIT License](https://opensource.org/licenses/MIT). See `LICENSE` for more information.
