@@ -39,7 +39,3 @@ Using Package-AutoRelease is as simple as:
 - Commit and push to your branch as needed.
 - When you're ready to create a new release, simply run `npm run release`, and a new release with a changelog will be generated automatically.
 - Use the package in other projects via: `npm install @YOUR_GITHUB_USERNAME/YOUR_REPO_NAME` (replace github username/repo name).
-
-## 📝 License
-
-Package-AutoRelease is released under the [MIT License](https://opensource.org/licenses/MIT). See `LICENSE` for more information.
