@@ -13,29 +13,28 @@ Package-AutoRelease is a tool designed to help you easily automate the versionin
 - Seamless authentication via Github, with no need for an npm account/server.
 - Commitizen-friendly commits and automatically generated changelogs.
 
-## 🎉 Getting Started
+## 🛠️ Setup
 
-Getting started with Package-AutoRelease is a breeze. Follow these simple steps to automate your versioning and releasing:
+Follow these simple steps to set up and start using Package-AutoRelease:
 
-1. Create a git repo with an npm package (`npm init -y`).
-    - The name of the package **must** be `@YOUR_GITHUB_USERNAME/YOUR_REPO_NAME`, e.g. `@augustmuir/my-private-repo`.
-2. Create a Github Personal Access token [here](https://github.com/settings/tokens).
-    - Only permission needed is `write:packages`.
-3. Authenticate using Github (no npm account/server is needed).
-    - With `@OWNER` being your Github username (e.g. `@augustmuir`), run `npm login --scope=@OWNER --registry=https://npm.pkg.github.com`.
-4. Automate releases via a release script:
-    - Install `standard-version` with `npm install -D standard-version@latest`.
-    - Add the following script to your `package.json`:
-        ```
-        "scripts": {
-            "release": "standard-version && git push --follow-tags && npm publish"
-        }
-        ```
+1. Create a git repository with an npm package. You can use the command `npm init -y` to create a new npm package.
+    - The name of the package must be in the format `@YOUR_GITHUB_USERNAME/YOUR_REPO_NAME`, for example: `@augustmuir/my-private-repo`.
+2. Generate a Github Personal Access Token with `write:packages` permission [here](https://github.com/settings/tokens).
+3. Authenticate your Github account with npm by running `npm login --scope=@OWNER --registry=https://npm.pkg.github.com`, where `@OWNER` is your Github username.
+4. Install `standard-version` with `npm install -D standard-version@latest`.
+5. Add the following script to your `package.json`:
+```
+"scripts": {
+    "release": "standard-version && git push --follow-tags && npm publish"
+}
+```
 
-## 💻 Usage
+## 🚀 Usage
 
 Using Package-AutoRelease is as simple as:
 
-- Commit and push to your branch as needed.
-- When you're ready to create a new release, simply run `npm run release`, and a new release with a changelog will be generated automatically.
-- Use the package in other projects via: `npm install @YOUR_GITHUB_USERNAME/YOUR_REPO_NAME` (replace github username/repo name).
+1. Commit your changes to your branch as needed.
+2. When you're ready to create a new release, run `npm run release` to generate a new release with a changelog.
+3. You can use the package in other projects via `npm install @YOUR_GITHUB_USERNAME/YOUR_REPO_NAME` (replace github username/repo name).
+
+That's it! With these simple steps, you can automate the versioning and releasing of your Github packages with just a few commands.
