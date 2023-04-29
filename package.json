@@ -1,0 +1,27 @@
+{
+  "name": "@augustmuir/package-autorelease",
+  "version": "0.0.1",
+  "description": "create a private Github package which automatically handles versioning and releases (via a release script)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/augustmuir/package-autorelease.git"
+  },
+  "author": "augustkimo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/augustmuir/package-autorelease/issues"
+  },
+  "homepage": "https://github.com/augustmuir/package-autorelease#readme",
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@types/node": "^18.16.3"
+  }
+}
