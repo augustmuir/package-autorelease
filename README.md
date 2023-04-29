@@ -12,6 +12,7 @@ Package-AutoRelease is a tool designed to help you easily automate the versionin
 - Automatic versioning and releases with a single command thanks to `standard-version`.
 - Seamless authentication via Github, with no need for an npm account/server.
 - Commitizen-friendly commits and automatically generated changelogs.
+- Automatically create a changelog with relevant commits for each release.
 
 ## 🛠️ Setup
 
