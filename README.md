@@ -18,12 +18,26 @@ Package-AutoRelease is a tool designed to help you easily automate the versionin
 
 Follow these simple steps to set up and start using Package-AutoRelease:
 
-1. Create a git repository with an npm package. You can use the command `npm init -y` to create a new npm package.
-    - The name of the package must be in the format `@YOUR_GITHUB_USERNAME/YOUR_REPO_NAME`, for example: `@augustmuir/my-private-repo`.
-2. Generate a Github Personal Access Token with `write:packages` permission [here](https://github.com/settings/tokens).
-3. Authenticate your Github account with npm by running `npm login --scope=@OWNER --registry=https://npm.pkg.github.com`, where `@OWNER` is your Github username.
-4. Install `standard-version` with `npm install -D standard-version@latest`.
-5. Add the following script to your `package.json`:
+1. In your package folder if not already initialize npm `npm init -y`, create/add a Github repo, and name your package `@YOUR_GITHUB_USERNAME/YOUR_GTIHUB_REPO_NAME`.
+```
+npm init -y
+```
+
+```
+// package.json
+{
+  "name": "@username/reponame", // ex: "@augustmuir/package-autorelease",
+  ...
+}
+```
+2. If not already authorized with Github & npm:
+  - Generate a Github Personal Access with `write:packages` permission [here](https://github.com/settings/tokens).
+  - Authenticate your Github account: `npm login --scope=@YOUR_GITHUB_USERNAME --registry=https://npm.pkg.github.com`.
+3. Add `standard-version`
+```
+npm install -D standard-version@latest
+```
+4. Add the following script to your `package.json`:
 ```
 "scripts": {
     "release": "standard-version && git push --follow-tags && npm publish"
